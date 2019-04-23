@@ -6,14 +6,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-    <TextView
+    <EditText
+            android:id="@+id/tipAmt"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:hint="Initial Price"
+            android:inputType="numberDecimal"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="250dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <Spinner
+            android:id="@+id/tipChooser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            app:layout_constraintStart_toStartOf="@+id/tipBtn" android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tipAmt"/>
+    <Button
+            android:id="@+id/tipBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip"
+            android:enabled="false"
+            app:layout_constraintStart_toStartOf="@+id/tipAmt" android:layout_marginTop="34dp"
+            android:layout_marginLeft="38dp" android:layout_marginStart="38dp"
+            app:layout_constraintTop_toBottomOf="@+id/tipChooser"/>
 </android.support.constraint.ConstraintLayout>
